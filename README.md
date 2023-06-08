@@ -9,4 +9,4 @@ The displayed weather information includes the current temperature, humidity, an
 
 By utilizing the OpenWeather API, the WeatherApp ensures accurate and up-to-date weather data. The API integration enables the app to fetch data such as temperature, humidity, and weather conditions, providing users with reliable and timely information.
 
-<a href="https://an-weatherapp.netlify.app/">Live Demo</a>
+<a href="https://an-weatherapp.netlify.app/" target="_blank">Live Demo</a>
