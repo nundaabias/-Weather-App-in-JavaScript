@@ -12,7 +12,9 @@ const wrapper = document.querySelector(".weather-app"),
   txtInfo = document.querySelector("#txtInfo"),
   weatherIcon = document.querySelector('.weather-view img');
 
-const Key = "a4890b8df91d16a44c251e5c4955b816";
+//   IMPORT openWeather api Key
+import Keys from './keys.js';
+const Key = Keys();
 let api = '';
 
 //BTN | TO GO BACK TO THE FORM VIEW
