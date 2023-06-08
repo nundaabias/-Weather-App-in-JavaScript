@@ -76,13 +76,25 @@ const waetherDetails = (info) => {
         const {description, id} = info.weather[0];
         const {feels_like,  humidity, temp} = info.main;
 
-        if(id == 800){
+        if(id == 800){ // Clear Sky
             weatherIcon.src = './svg/day.svg';
-        }else if(id == 801 || id < 805){
+        }else if(id > 800 & id < 805){ // Cloudy
             weatherIcon.src = './svg/cloudy.svg';
 
-        }else if(id == 701 || id < 782){
-            weatherIcon.src = './svg/cloudy.svg';
+        }else if(id > 700 & id < 782){ //Atmosphere
+            weatherIcon.src = './svg/rainy-3.svg';
+
+        }else if(id > 599 & id < 623){ //Snow
+            weatherIcon.src = './svg/snowy-5.svg';
+
+        }else if(id > 499 & id < 532){ //Rain
+            weatherIcon.src = './svg/rainy-6.svg';
+
+        }else if(id > 299 & id < 322){ //Drizzle
+            weatherIcon.src = './svg/rainy-1.svg';
+
+        }else if(id > 199 & id < 233){ //Thunderstorm
+            weatherIcon.src = './svg/thunder.svg';
 
         }
         // ADDING THE VALUES TO THE HTML
