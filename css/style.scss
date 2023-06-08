@@ -21,7 +21,6 @@ body {
   display: flex;
   flex-direction: column;
   width: 300px;
-  padding: 20px 20px;
   border-radius: 10px;
   gap: 20px;
 
@@ -33,7 +32,7 @@ body {
   }
 
   .off {
-    display: none;
+    display: none !important;
   }
 
   .app-header {
@@ -42,6 +41,7 @@ body {
     padding-bottom: 10px;
     border-bottom: 1px solid rgba(153, 153, 153, 0.562);
     gap: 10px;
+    padding: 10px 10px;
     i,
     h3 {
       margin: 0;
@@ -56,6 +56,7 @@ body {
     }
   }
   .app-body {
+    // Form View
     .form-view {
       display: flex;
       flex-direction: column;
@@ -104,6 +105,85 @@ body {
       .btn:active {
         box-shadow: 0 2px #666;
         transform: translateY(1px);
+      }
+    }
+
+    // Weather View
+    .weather-view {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      color: #333;
+
+      .weather-icon {
+        width: 200px;
+        height: auto;
+        padding: none;
+        margin-bottom: -30px;
+      }
+
+      .temp {
+        display: flex;
+        font-size: 50px;
+        font-weight: bold;
+      }
+
+      .weather-title {
+        padding: 10px 0;
+      }
+
+      .app-footer {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        height: 60px;
+        border-top: 1px solid rgba(153, 153, 153, 0.562);
+        margin-top: 40px;
+        padding: 10px 0px;
+        box-sizing: border-box;
+        font-size: 16px;
+        position: relative;
+
+        .vl {
+          border-left: 1px solid rgba(153, 153, 153, 0.562);
+          height: 100%;
+          position: absolute;
+          left: 50%;
+          margin-left: -3px;
+          top: 0;
+        }
+
+        .left,
+        .right {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+
+          .icon {
+            font-size: 25px;
+            color: var(--primary);
+            margin: none;
+            padding: none;
+          }
+
+          .details {
+            display: flex;
+            flex-direction: column;
+            .number,
+            .degree {
+              font-size: 18px;
+            }
+            .info {
+              margin-top: -2px;
+              margin-bottom: 0;
+              padding: none;
+              font-size: 12px;
+            }
+          }
+        }
       }
     }
   }

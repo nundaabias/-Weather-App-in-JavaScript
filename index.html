@@ -25,7 +25,7 @@
       <!-- Body -->
       <div class="app-body">
         <!-- Form View -->
-        <div class="form-view">
+        <div class="form-view off">
           <p class="info-txt off">
             <i class="fa fa-exclamation-circle"></i> Please enter a valid city
           </p>
@@ -41,11 +41,45 @@
         </div>
         <!-- Weather View -->
         <div class="weather-view">
+          <img
+            src="./svg/mostly-cloudy-svgrepo-com.svg"
+            class="weather-icon"
+            alt=""
+          />
+          <div class="temp">
+            <div class="number">23</div>
+            <div class="degree">°</div>
+            C
+          </div>
+          <div class="weather-title">Sunny</div>
+          <div class="location">
+            <i class="fa fa-map-marker"></i> Windhoek, Namibia
+          </div>
+
+          <!-- Footer -->
+          <div class="app-footer">
+            <!-- Feels Like -->
+            <div class="left">
+              <i class="fa fa-thermometer-empty icon"></i>
+              <div class="details">
+                <div class="number">23<span class="degree">°C</span></div>
+                <p class="info">Feels Like</p>
+              </div>
+            </div>
+            <!-- Vertical Line -->
+            <div class="vl"></div>
+            <!-- Humidity -->
+            <div class="right">
+              <i class="fa fa-tint icon"></i>
+              <div class="details">
+                <div class="number">93<span class="degree">%</span></div>
+                <p class="info">Humidity</p>
+              </div>
             
+            </div>
+          </div>
         </div>
       </div>
-      <!-- Footer -->
-      <div class="app-footer"></div>
     </div>
   </body>
 </html>
