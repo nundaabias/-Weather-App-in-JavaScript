@@ -46,9 +46,8 @@ body {
     h3 {
       margin: 0;
       padding: 0;
-    }
-    h3 {
       color: var(--primary);
+
     }
     i:hover {
       cursor: pointer;
@@ -59,9 +58,19 @@ body {
     // Form View
     .form-view {
       display: flex;
+      justify-content: center;
+      align-items: center;
       flex-direction: column;
+      box-sizing: border-box;
       gap: 10px;
       width: 100%;
+      padding: 20px;
+
+      img {
+        width: 100px;
+        height: auto;
+        margin-top: -20px;
+      }
       .info-txt {
         box-sizing: border-box;
         background-color: var(--warning);
@@ -72,7 +81,7 @@ body {
       }
 
       input {
-        width: 296px;
+        width: 100%;
         padding: 10px 0;
         border: 1px solid #333;
         border-radius: 10px;

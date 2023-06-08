@@ -46,8 +46,6 @@ body {
 .weather-app .app-header h3 {
   margin: 0;
   padding: 0;
-}
-.weather-app .app-header h3 {
   color: var(--primary);
 }
 .weather-app .app-header i:hover {
@@ -56,9 +54,18 @@ body {
 }
 .weather-app .app-body .form-view {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+  box-sizing: border-box;
   gap: 10px;
   width: 100%;
+  padding: 20px;
+}
+.weather-app .app-body .form-view img {
+  width: 100px;
+  height: auto;
+  margin-top: -20px;
 }
 .weather-app .app-body .form-view .info-txt {
   box-sizing: border-box;
@@ -69,7 +76,7 @@ body {
   margin-top: 10px;
 }
 .weather-app .app-body .form-view input {
-  width: 296px;
+  width: 100%;
   padding: 10px 0;
   border: 1px solid #333;
   border-radius: 10px;
