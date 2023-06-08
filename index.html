@@ -1,12 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather</title>
-</head>
-<body>
-    
-</body>
+    <!-- FONTAWESOME ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="weather-app">
+      <!-- Header -->
+      <div class="app-header">
+        <i class="fa fa-arrow-left off"></i>
+        <h3 class="title">Weather App</h3>
+      </div>
+
+      <!-- Body -->
+      <div class="app-body">
+        <!-- Form View -->
+        <div class="form-view">
+          <p class="info-txt off">
+            <i class="fa fa-exclamation-circle"></i> Please enter a valid city
+          </p>
+          <input
+            type="text"
+            name="city-txt"
+            id="city-txt"
+            placeholder="City Name..."
+            spellcheck="true"
+          />
+          <div class="divider">or</div>
+          <span class="btn">Get Location</span>
+        </div>
+        <!-- Weather View -->
+        <div class="weather-view">
+            
+        </div>
+      </div>
+      <!-- Footer -->
+      <div class="app-footer"></div>
+    </div>
+  </body>
 </html>

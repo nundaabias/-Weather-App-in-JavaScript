@@ -1,0 +1,110 @@
+:root {
+  --primary: #3498db;
+  --primary-darker: #2980b9;
+  --white: #f9f9f9;
+  --warning: rgba(243, 157, 18, 0.411);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+}
+
+.weather-app {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 20px 20px;
+  border-radius: 10px;
+  gap: 20px;
+
+  height: fit-content;
+  background-color: var(--white);
+
+  .on {
+    display: inline;
+  }
+
+  .off {
+    display: none;
+  }
+
+  .app-header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(153, 153, 153, 0.562);
+    gap: 10px;
+    i,
+    h3 {
+      margin: 0;
+      padding: 0;
+    }
+    h3 {
+      color: var(--primary);
+    }
+    i:hover {
+      cursor: pointer;
+      font-size: large;
+    }
+  }
+  .app-body {
+    .form-view {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      .info-txt {
+        box-sizing: border-box;
+        background-color: var(--warning);
+        padding: 10px;
+        color: #333;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      input {
+        width: 296px;
+        padding: 10px 0;
+        border: 1px solid #333;
+        border-radius: 10px;
+        text-align: center;
+        outline: none;
+      }
+
+      input[type="text"]:focus {
+        border: 1px solid var(--primary);
+      }
+
+      .divider {
+        text-align: center;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 10px 0;
+        border-radius: 10px;
+        box-shadow: none;
+        text-align: center;
+        background-color: var(--primary);
+        color: var(--white);
+      }
+      .btn:hover {
+        cursor: pointer;
+        color: var(--white);
+        background-color: var(--primary-darker);
+      }
+      .btn:active {
+        box-shadow: 0 2px #666;
+        transform: translateY(1px);
+      }
+    }
+  }
+}
