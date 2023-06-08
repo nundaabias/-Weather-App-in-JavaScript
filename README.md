@@ -1,4 +1,4 @@
-# -Weather-App-in-JavaScript
+# Weather App
 The WeatherApp is a user-friendly web application developed using HTML, CSS, JavaScript, and the OpenWeather API. It provides real-time weather information for various locations around the world.
 
 The app's interface is designed using HTML and styled with CSS to create an intuitive and visually appealing user experience. 
