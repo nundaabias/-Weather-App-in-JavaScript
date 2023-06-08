@@ -18,7 +18,7 @@
     <div class="weather-app">
       <!-- Header -->
       <div class="app-header">
-        <i class="fa fa-arrow-left off"></i>
+        <i class="fa fa-arrow-left" id="btnBack"></i>
         <h3 class="title">Weather App</h3>
       </div>
 
@@ -27,38 +27,39 @@
         <!-- Form View -->
         <div class="form-view">
           <img
-            src="./svg/mostly-cloudy-svgrepo-com.svg"
+            src="./svg/weather.svg"
             class="weather-icon"
             alt=""
           />
-          <p class="info-txt off">
-            <i class="fa fa-exclamation-circle"></i> Please enter a valid city
-          </p>
+          <div class="info-txt" id="infoBox">
+            <i class="fa fa-exclamation-circle"></i>
+            <p id="txtInfo"></p>
+          </div>
           <input
             type="text"
             name="city-txt"
-            id="city-txt"
+            id="txtCity"
             placeholder="City Name..."
             spellcheck="true"
           />
           <div class="divider">or</div>
-          <span class="btn">Get Location</span>
+          <span class="btn" id="btnGet">Get your location</span>
         </div>
         <!-- Weather View -->
-        <div class="weather-view off">
+        <div class="weather-view">
           <img
-            src="./svg/mostly-cloudy-svgrepo-com.svg"
+            src="./svg/weather.svg"
             class="weather-icon"
             alt=""
           />
           <div class="temp">
-            <div class="number">23</div>
+            <div class="number">--</div>
             <div class="degree">°</div>
             C
           </div>
-          <div class="weather-title">Sunny</div>
+          <div class="weather-title">--</div>
           <div class="location">
-            <i class="fa fa-map-marker"></i> Windhoek, Namibia
+            <i class="fa fa-map-marker"></i> <span class="country"></span>
           </div>
 
           <!-- Footer -->
@@ -67,7 +68,9 @@
             <div class="left">
               <i class="fa fa-thermometer-empty icon"></i>
               <div class="details">
-                <div class="number">23<span class="degree">°C</span></div>
+                <div class="number">
+                  <span class="feels">--</span><span class="degree">°C</span>
+                </div>
                 <p class="info">Feels Like</p>
               </div>
             </div>
@@ -77,7 +80,9 @@
             <div class="right">
               <i class="fa fa-tint icon"></i>
               <div class="details">
-                <div class="number">93<span class="degree">%</span></div>
+                <div class="number">
+                  <span class="humidity">--</span><span class="degree">%</span>
+                </div>
                 <p class="info">Humidity</p>
               </div>
             </div>
@@ -86,4 +91,5 @@
       </div>
     </div>
   </body>
+  <script src="./js/main.js"></script>
 </html>

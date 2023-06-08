@@ -2,7 +2,9 @@
   --primary: #3498db;
   --primary-darker: #2980b9;
   --white: #f9f9f9;
+  --pending: rgba(39, 174, 95, 0.411);
   --warning: rgba(243, 157, 18, 0.411);
+  --error: hsla(6, 78%, 57%, 0.411);
 }
 
 body {
@@ -17,6 +19,16 @@ body {
   background-color: var(--primary);
 }
 
+.active .app-header i {
+  display: inline !important;
+}
+.active .form-view {
+  display: none !important;
+}
+.active .weather-view {
+  display: flex !important;
+}
+
 .weather-app {
   display: flex;
   flex-direction: column;
@@ -28,11 +40,11 @@ body {
   height: fit-content;
   background-color: var(--white);
 }
-.weather-app .on {
-  display: inline;
-}
 .weather-app .off {
   display: none !important;
+}
+.weather-app .active {
+  display: flex !important;
 }
 .weather-app .app-header {
   display: flex;
@@ -47,6 +59,9 @@ body {
   margin: 0;
   padding: 0;
   color: var(--primary);
+}
+.weather-app .app-header i {
+  display: none;
 }
 .weather-app .app-header i:hover {
   cursor: pointer;
@@ -63,17 +78,29 @@ body {
   padding: 20px;
 }
 .weather-app .app-body .form-view img {
-  width: 100px;
+  width: 200px;
   height: auto;
   margin-top: -20px;
 }
 .weather-app .app-body .form-view .info-txt {
+  display: none;
   box-sizing: border-box;
-  background-color: var(--warning);
-  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 30px;
+  padding: 0;
+  margin: 10px 0;
+  gap: 5px;
   color: #333;
-  text-align: center;
-  margin-top: 10px;
+}
+.weather-app .app-body .form-view .error {
+  display: flex;
+  background-color: var(--error);
+}
+.weather-app .app-body .form-view .pending {
+  display: flex;
+  background-color: var(--pending);
 }
 .weather-app .app-body .form-view input {
   width: 100%;
@@ -108,7 +135,7 @@ body {
   transform: translateY(1px);
 }
 .weather-app .app-body .weather-view {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;

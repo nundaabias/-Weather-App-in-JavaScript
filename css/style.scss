@@ -2,7 +2,9 @@
   --primary: #3498db;
   --primary-darker: #2980b9;
   --white: #f9f9f9;
+  --pending: rgba(39, 174, 95, 0.411);
   --warning: rgba(243, 157, 18, 0.411);
+  --error: hsla(6, 78%, 57%, 0.411);
 }
 
 body {
@@ -17,6 +19,20 @@ body {
   background-color: var(--primary);
 }
 
+.active {
+  .app-header {
+    i {
+      display: inline !important;
+    }
+  }
+  .form-view {
+    display: none !important;
+  }
+  .weather-view {
+    display: flex !important;
+  }
+}
+
 .weather-app {
   display: flex;
   flex-direction: column;
@@ -27,12 +43,11 @@ body {
   height: fit-content;
   background-color: var(--white);
 
-  .on {
-    display: inline;
-  }
-
   .off {
     display: none !important;
+  }
+  .active {
+    display: flex !important;
   }
 
   .app-header {
@@ -47,7 +62,9 @@ body {
       margin: 0;
       padding: 0;
       color: var(--primary);
-
+    }
+    i {
+      display: none;
     }
     i:hover {
       cursor: pointer;
@@ -67,17 +84,31 @@ body {
       padding: 20px;
 
       img {
-        width: 100px;
+        width: 200px;
         height: auto;
         margin-top: -20px;
       }
       .info-txt {
+        display: none;
         box-sizing: border-box;
-        background-color: var(--warning);
-        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 30px;
+        padding: 0;
+        margin: 10px 0;
+        gap: 5px;
+
         color: #333;
-        text-align: center;
-        margin-top: 10px;
+      }
+
+      .error {
+        display: flex;
+        background-color: var(--error);
+      }
+      .pending {
+        display: flex;
+        background-color: var(--pending);
       }
 
       input {
@@ -119,7 +150,7 @@ body {
 
     // Weather View
     .weather-view {
-      display: flex;
+      display: none;
       flex-direction: column;
       align-items: center;
       justify-content: center;
