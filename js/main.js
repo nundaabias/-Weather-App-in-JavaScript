@@ -13,8 +13,8 @@ const wrapper = document.querySelector(".weather-app"),
   weatherIcon = document.querySelector('.weather-view img');
 
 //   IMPORT openWeather api Key
-import Keys from './keys.js';
-const Key = Keys();
+import WEATHER_API_KEY from './keys.js';
+const Key = WEATHER_API_KEY;
 let api = '';
 
 //BTN | TO GO BACK TO THE FORM VIEW
@@ -29,6 +29,7 @@ txtCity.addEventListener("keyup", (e) => {
     requestApi(txtCity.value);
   }
 });
+
 
 // FUNCTION | USING THE API TO REQUEST WEATHER INFO
 const requestApi = (city) => {

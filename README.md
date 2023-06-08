@@ -8,3 +8,5 @@ JavaScript is used to fetch weather data from the OpenWeather API and dynamicall
 The displayed weather information includes the current temperature, humidity, and weather conditions such as cloudy, sunny, rainy, etc.
 
 By utilizing the OpenWeather API, the WeatherApp ensures accurate and up-to-date weather data. The API integration enables the app to fetch data such as temperature, humidity, and weather conditions, providing users with reliable and timely information.
+
+<a href="https://an-weatherapp.netlify.app/">Live Demo</a>

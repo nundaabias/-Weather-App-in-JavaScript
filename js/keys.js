@@ -1,5 +1,2 @@
-
-export default function Keys() {
-    const weatherKey = "a4890b8df91d16a44c251e5c4955b816";
-    return weatherKey;
-  }
+const WEATHER_API_KEY = "a4890b8df91d16a44c251e5c4955b816";
+export default WEATHER_API_KEY;
