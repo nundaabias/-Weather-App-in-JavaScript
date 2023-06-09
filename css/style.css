@@ -15,8 +15,8 @@ body {
   flex-direction: column;
   gap: 20px;
   width: 100%;
-  height: 100vh;
-  max-height: 100vh;
+  height: 100svh;
+  max-height: 100svh;
   align-items: center;
   justify-content: center;
   background-color: var(--primary);
@@ -110,21 +110,38 @@ body a {
   display: flex;
   background-color: var(--pending);
 }
-.weather-app .app-body .form-view input {
+.weather-app .app-body .form-view .form {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  padding: 10px 0;
+}
+.weather-app .app-body .form-view .form .form-group {
+  display: flex;
+  width: 100%;
   border: 1px solid var(--primary);
   border-radius: 10px;
+}
+.weather-app .app-body .form-view .form .form-group input {
+  flex: 6;
+  padding: 10px 2px;
+  border: none;
   text-align: center;
   outline: none;
+  background-color: transparent;
 }
-.weather-app .app-body .form-view input[type=text]:focus {
-  border: 1px solid var(--primary-darker);
+.weather-app .app-body .form-view .form .form-group .btn {
+  flex: 1;
+  border-radius: 10px;
+  background-color: var(--white);
+  border: none;
+  color: #333;
 }
-.weather-app .app-body .form-view .divider {
+.weather-app .app-body .form-view .form .divider {
   text-align: center;
+  color: #333;
+  padding: 20px 0;
 }
-.weather-app .app-body .form-view .btn {
+.weather-app .app-body .form-view .form .btn {
   width: 100%;
   padding: 10px 0;
   border-radius: 10px;
@@ -133,12 +150,12 @@ body a {
   background-color: var(--primary);
   color: var(--white);
 }
-.weather-app .app-body .form-view .btn:hover {
+.weather-app .app-body .form-view .form .btn:hover {
   cursor: pointer;
   color: var(--white);
   background-color: var(--primary-darker);
 }
-.weather-app .app-body .form-view .btn:active {
+.weather-app .app-body .form-view .form .btn:active {
   box-shadow: 0 2px #666;
   transform: translateY(1px);
 }
@@ -215,4 +232,23 @@ body a {
   margin-bottom: 0;
   padding: none;
   font-size: 12px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .weather-app {
+    width: 100%;
+    height: 100svh;
+  }
+  .weather-app .weather-view {
+    justify-content: flex-start !important;
+    align-items: center;
+    position: relative !important;
+    height: 80svh;
+  }
+  .weather-app .weather-view .app-footer {
+    position: absolute !important;
+    bottom: 0;
+    left: 0;
+  }
 }/*# sourceMappingURL=style.css.map */

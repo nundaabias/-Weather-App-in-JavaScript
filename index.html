@@ -26,32 +26,30 @@
       <div class="app-body">
         <!-- Form View -->
         <div class="form-view">
-          <img
-            src="./svg/weather.svg"
-            class="weather-icon"
-            alt=""
-          />
+          <img src="./svg/weather.svg" class="weather-icon" alt="" />
           <div class="info-txt" id="infoBox">
             <i class="fa fa-exclamation-circle"></i>
             <p id="txtInfo"></p>
           </div>
-          <input
-            type="text"
-            name="city-txt"
-            id="txtCity"
-            placeholder="City Name..."
-            spellcheck="true"
-          />
-          <div class="divider">or</div>
-          <span class="btn" id="btnGet">Get your location</span>
+          <!-- FORM -->
+          <div class="form">
+            <div class="form-group">
+              <input
+                type="text"
+                name="city-txt"
+                id="txtCity"
+                placeholder="City Name..."
+                spellcheck="true"
+              />
+              <span class="btn" id="btn-submit"><i class="fa fa-search"></i></span>
+            </div>
+            <div class="divider">or</div>
+            <span class="btn" id="btnGet">Get your location</span>
+          </div>
         </div>
         <!-- Weather View -->
         <div class="weather-view">
-          <img
-            src="./svg/weather.svg"
-            class="weather-icon"
-            alt=""
-          />
+          <img src="./svg/weather.svg" class="weather-icon" alt="" />
           <div class="temp">
             <div class="number">--</div>
             <div class="degree">°</div>
@@ -90,7 +88,12 @@
         </div>
       </div>
     </div>
-    <footer>&copy; <a href="https://github.com/nundaabias/" target="_blank" rel="Weather App">Media Factory</a></footer>
+    <footer>
+      &copy;
+      <a href="https://github.com/nundaabias/" target="_blank" rel="Weather App"
+        >Media Factory</a
+      >
+    </footer>
   </body>
   <script type="module" src="./js/main.js"></script>
 </html>
