@@ -268,7 +268,7 @@ body {
       justify-content:flex-start !important;
       align-items: center;
       position: relative !important;
-      height: 80svh;
+      height: calc(100svh - 200px);
   
       .app-footer {
         position: absolute !important;
