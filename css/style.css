@@ -244,7 +244,7 @@ body a {
     justify-content: flex-start !important;
     align-items: center;
     position: relative !important;
-    height: calc(100svh - 200px);
+    height: 80svh;
   }
   .weather-app .weather-view .app-footer {
     position: absolute !important;
