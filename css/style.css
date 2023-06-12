@@ -1,7 +1,9 @@
 :root {
-  --primary: #3498db;
-  --primary-darker: #2980b9;
+  --primary: #0095FF;
+  --secondary: #202B3B;
+  --background: #0B131E;
   --white: #f9f9f9;
+  --grey: #999;
   --pending: rgba(39, 174, 95, 0.411);
   --warning: rgba(243, 157, 18, 0.411);
   --error: hsla(6, 78%, 57%, 0.411);
