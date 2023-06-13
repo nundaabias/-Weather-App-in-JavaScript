@@ -1,201 +1,318 @@
 :root {
-    --primary: #0095ff;
-    --secondary: #202b3b;
-    --background: #0b131e;
-    --white: #f9f9f9;
-    --grey: #999;
-    --pending: rgba(39, 174, 95, 0.411);
-    --warning: rgba(243, 157, 18, 0.411);
-    --error: hsla(6, 78%, 57%, 0.411);
-}
-
-
-
-.dark {
-    background-color: var(--background);
-    color: var(--white);
+  --primary: #0095ff;
+  --secondary: #202b3b;
+  --background: #0b131e;
+  --white: #f9f9f9;
+  --grey: #999;
+  --pending: rgba(39, 174, 95, 0.411);
+  --warning: rgba(243, 157, 18, 0.411);
+  --error: hsla(6, 78%, 57%, 0.411);
+  --shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  --shadow-small: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+    rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .box {
-    background-color: var(--secondary);
+  background-color: var(--secondary);
+}
+
+.light {
+  background-color: var(--white) !important;
+  color: var(--background) !important;
+}
+
+.light .box {
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  color: var(--background);
+}
+
+.light .sidebar a {
+  color: var(--background);
+}
+.light .searchBar {
+  background-color: var(--white);
+  box-shadow: var(--shadow-small);
+}
+
+.light .searchBar input {
+  color: var(--background);
+}
+.light .searchBar .btn {
+  background-color: var(--white);
+  /* box-shadow: var(--shadow-small); */
+  color: var(--background);
+}
+.light .searchBar .btn:hover {
+  background-color: var(--background);
+  color: var(--white);
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 .wrapper {
-    display: flex;
-    box-sizing: border-box;
-    position: relative;
-    width: 100vw;
-    height: 100svh;
-    padding: 10px 10px;
-    background-color: var(--background);
-
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+  width: 100vw;
+  height: 100svh;
+  padding: 10px 10px;
+  gap: 10px;
+  background-color: var(--background);
+  color: var(--white);
 }
-.sidebarOn .sidebar{
-    display: flex !important;
-    z-index: 999;
-    top: 10px;
-    left: 0;
-    bottom: 10px;
+.sidebarOn .sidebar {
+  display: flex !important;
+  z-index: 999;
+  top: 10px;
+  left: 0;
+  bottom: 10px;
 
-    width: 60px;
-    gap: 32%;
-    height: calc(100vhs);
+  width: 60px;
+  gap: 30%;
+  height: calc(100vhs);
 }
 
 .sidebar {
-    display: none;
-    flex-direction: column;
-    justify-content:flex-start;
-    align-items: center;
-    position: absolute;
-   
-    border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;;
-    background-color: var(--secondary);
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.sidebar .top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .btnCloseNav {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 .logo {
-    display: flex;
-    flex: 0 1;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-   
-
+  display: flex;
+  flex: 0 1;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
-.logo img{
-    width: 40px;
-    height: 40px;
+.logo img {
+  width: 40px;
+  height: 40px;
 }
 .links {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 .sidebar a {
-    display: flex;
-    flex-direction: column;
-    color: var(--white);
-    text-decoration: none;
-    align-items: center;
-    font-size: 0.712rem;
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  text-decoration: none;
+  align-items: center;
+  font-size: 0.712rem;
 }
 
 .sidebar a:hover {
-    color: var(--primary);
-    font-weight: bold;
+  color: var(--primary);
+  font-weight: bold;
 }
 
 .menu-icon {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
-
-
 
 .searchBar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 40px;
-    background-color: var(--secondary);
-    border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  background-color: var(--secondary);
+  border-radius: 20px;
 }
 .searchBar input {
-    flex: 1;
-    border: none;
-    background-color: transparent;
-    padding: 10px;
-    color: var(--white);
+  flex: 1;
+  border: none;
+  background-color: transparent;
+  padding: 10px;
+  color: var(--white);
 }
 .searchBar .btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
-    background-color: var(--secondary);
-    padding: 10px;
-    border-radius: 20px;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  background-color: var(--secondary);
+  padding: 10px;
+  border-radius: 20px;
 }
 .searchBar .btn:hover {
-    background-color: var(--primary);
+  background-color: var(--primary);
 }
 .searchBar input:focus {
-   outline: none;
+  outline: none;
 }
 .content {
-    display: flex;
-    box-sizing: border-box;
-    flex-direction: column;
-    width: calc(100vw);
-    padding: 0 10px;
-    gap: 10px;
-
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 100%;
+  /* padding: 0 10px; */
+  gap: 10px;
 }
 
 .weatherNow {
-    display: flex;
-    box-sizing: border-box;
-    justify-content: space-evenly;
-    width: 100%;
-    height: fit-content;
-    padding: 5px;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-evenly;
+  width: 100%;
+  height: fit-content;
+  padding: 5px;
 }
-.title{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+.weatherNow .title {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
-.city{
-    font-size: 1.5rem;
+.city {
+  font-size: 1.5rem;
 }
 .rainInfo {
-    font-size: 0.823rem;
+  font-size: 0.823rem;
 }
 
 .weatherInfo {
-    display: flex;
-    flex: 1;
-    margin-top: 8px;
-    font-size: 2.5rem;
+  display: flex;
+  flex: 1;
+  margin-top: 8px;
+  font-size: 2.5rem;
+}
+.weatherIcon {
+  display: flex;
+  flex: 1;
+  height: auto;
+  box-sizing: border-box;
+  justify-content: flex-end;
+}
+.weatherIcon img {
+  width: 100px;
+  height: 100px;
+}
+.forcast-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .todayForcast {
-    display: flex;
-    width: 100%;
-    height: 200px;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+  height: fit-content;
 
-    border-radius: 20px;
-    background-color: var(--secondary);
+  border-radius: 20px;
+}
+
+.forcast-section .weatherInfo {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+
+.todayForcast .item {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+  gap: 10px;
+  overflow: visible;
+}
+.todayForcast .title,
+.airCondition .title {
+  font-size: 0.812rem;
+  padding: 10px;
+  text-transform: uppercase;
+}
+.weatherInfo .time {
+  font-size: 0.5rem;
+}
+.weatherInfo img {
+  width: 40px;
+  height: 40px;
+}
+.weatherInfo .temp {
+  font-size: 1.1rem;
+  font-weight: bold;
 }
 
 .airCondition {
-    display: flex;
-    width: 100%;
-    height: 200px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  height: fit-content;
 
-    border-radius: 20px;
-    background-color: var(--secondary);
+  border-radius: 20px;
+}
+
+.airContent {
+  display: flex;
+  justify-content: space-around;
+}
+
+.airContent .item {
+  display: flex;
+  box-sizing: border-box;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.airCondition .feel {
+  display: flex;
+  flex-direction: column;
+}
+
+.airCondition .feel .item-title {
+  font-size: 0.7rem;
+}
+.airCondition .feel .number {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.right-section {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .weekForcast {
-    display: flex;
-    width: 100%;
-    height: 600px;
+  display: flex;
+  flex: 1;
+  height: 22svh;
 
-    border-radius: 20px;
-    background-color: var(--secondary);
+  border-radius: 20px;
 }
-

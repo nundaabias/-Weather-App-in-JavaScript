@@ -1,0 +1,82 @@
+@media only screen and (min-width: 768px) {
+  /*WRAPPER STARTS  */
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  /*WRAPPER ENDS  */
+
+  /* SIDEBAR START */
+  .sidebarOn .sidebar {
+    display: flex !important;
+    z-index: 999;
+    top: 10px;
+    left: 0;
+    bottom: 10px;
+
+    width: 60px;
+    gap: 32%;
+    height: calc(100vhs);
+  }
+
+  .sidebar {
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    width: 60px;
+    gap: 32%;
+    height: calc(100%);
+  }
+
+  .top {
+    display: none;
+    margin-top: 0;
+  }
+
+  .logo {
+    margin-top: 10px;
+  }
+  #openNav {
+    display: none;
+  }
+  /* SIDEBAR ENDS */
+
+  /* CONTENT */
+  .content {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 3;
+    height: 100%;
+    margin: 0;
+    padding: 0 10px;
+  }
+
+  .forcast-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .todayForcast {
+    height: 30svh;
+  }
+
+  .airCondition {
+    height: 30svh;
+  }
+  /* CONTENT ENDS*/
+
+  /* WEEK FORCAST STARTS */
+  .right-section {
+    flex: 1;
+  }
+  .weekForcast {
+    height: 90svh;
+  }
+  /* WEEK FORCAST ENDS */
+}

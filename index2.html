@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,79 +8,181 @@
     <!-- LOGO -->
 
     <!-- FONTAWESOME ICONS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Style -->
     <link rel="stylesheet" href="./css/style2.css" />
-</head>
+    <link rel="stylesheet" href="./css/mediaQueries.css" />
+  </head>
 
-<body>
-    <div class="wrapper dark sidebarOn">
-        <div class="sidebar">
-            <div>
-                <i class="fa fa-arrow-left btnCloseNav"></i>
-            </div>
-            <div class="logo">
-                <img src="./logo/logo-c.png" alt="logo">
-            </div>
-            <div class="links">
-                <a href=""> <i class="fa fa-cloud menu-icon"></i>Home</a>
-                <a href=""> <i class="fa fa-wind menu-icon"></i>About</a>
-            </div>
-            
-                
+  <body>
+    <div class="wrapper light">
+      <!-- SIDEBAR -->
+      <div class="sidebar box">
+        <div class="top">
+          <i class="fa fa-arrow-left btnCloseNav"></i>
         </div>
-        <div class="content">
-            <div class="searchBar">
-                <span id="openNav" class="btn"><i class="fa fa-bars"></i></span>
-                <input type="text" id="searchTxt" placeholder="City Name">
-                <span id="searchBtn" class="btn"><i class="fa fa-search"></i></span>
+        <div class="logo">
+          <img src="./logo/logo-c.png" alt="logo" />
+        </div>
+        <div class="links">
+          <a href=""> <i class="fa fa-cloud menu-icon"></i>Home</a>
+          <a href=""> <i class="fa fa-wind menu-icon"></i>About</a>
+          <i class="fa-solid fa-sun menu-icon" id="btnMode"></i>
+        </div>
+      </div>
+      <!-- SIDEBAR ENDS-->
+      <!-- MAIN CONTENT -->
+      <div class="content">
+        <div class="searchBar">
+          <span id="openNav" class="btn"><i class="fa fa-bars"></i></span>
+          <input type="text" id="searchTxt" placeholder="City Name" />
+          <span id="searchBtn" class="btn"><i class="fa fa-search"></i></span>
+        </div>
+        <div class="weatherNow">
+          <div class="title">
+            <span class="city">Windhoek</span>
+            <span class="rainInfo">
+              Chance of rain: <span class="rainValue">0</span>%
+            </span>
+            <span class="weatherInfo">
+              <span class="number">14</span>
+              <span>&deg;</span>
+            </span>
+          </div>
+          <div class="weatherIcon">
+            <img src="./svg/sun.svg" alt="Weather Icon" id="weatherIcon" />
+          </div>
+        </div>
+        <section class="forcast-section">
+          <div class="todayForcast box">
+            <span class="title">Today's forcast</span>
+            <div class="weatherInfo">
+              <div class="item">
+                <span class="time">6:00 AM</span>
+                <img src="./svg/rain.svg" alt="" class="infoImg" />
+                <span class="temp"> <span class="numb">20</span>&deg; </span>
+              </div>
+
+              <div class="item">
+                <span class="time">7:00 AM</span>
+                <img src="./svg/sun-cloud.svg" alt="" class="infoImg" />
+                <span class="temp"> <span class="numb">14</span>&deg; </span>
+              </div>
+
+              <div class="item">
+                <span class="time">8:00 AM</span>
+                <img src="./svg/wind.svg" alt="" class="infoImg" />
+                <span class="temp"> <span class="numb">16</span>&deg; </span>
+              </div>
+
+              <div class="item">
+                <span class="time">9:00 AM</span>
+                <img src="./svg/snowy-5.svg" alt="" class="infoImg" />
+                <span class="temp"> <span class="numb">-3</span>&deg; </span>
+              </div>
+
+              <div class="item">
+                <span class="time">10:00 AM</span>
+                <img src="./svg/sun.svg" alt="" class="infoImg" />
+                <span class="temp"> <span class="numb">18</span>&deg; </span>
+              </div>
+
+              <div class="item">
+                <span class="time">11:00 AM</span>
+                <img src="./svg/thunder.svg" alt="" class="infoImg" />
+                <span class="temp"> <span class="numb">4</span>&deg; </span>
+              </div>
+
+              <div class="item">
+                <span class="time">12:00 PM</span>
+                <img src="./svg/night.svg" alt="" class="infoImg" />
+                <span class="temp"> <span class="numb">7</span>&deg; </span>
+              </div>
             </div>
-            <div class="weatherNow">
-                <div class="title">
-                    <span class="city">Windhoek</span>
-                    <span class="rainInfo">
-                        Chance of rain: <span class="rainValue">0</span>%
-                    </span>
-                    <span class="weatherInfo">
-                        <span class="number">14</span>
-                        <span>&deg;</span>
-                    </span>
+          </div>
+
+          <div class="airCondition box">
+            <span class="title">Air Condition</span>
+            <span class="airContent">
+              <div class="left">
+                <div class="item">
+                  <span class="ifo">
+                    <i class="fa fa-temperature-empty icon"></i>
+                  </span>
+                  <span class="feel">
+                    <span class="item-title">Real Feel</span>
+                    <span class="number">30<span>&deg;</span></span>
+                  </span>
                 </div>
-             
-                <img src="./svg/day.svg" alt="Weather Icon" id="weatherIcon">
-            
-            </div>
-            <div class="todayForcast">
-
-            </div>
-            <div class="airCondition">
-
-            </div>
-            <div class="weekForcast">
-
-            </div>
-        </div>
+                <div class="item">
+                  <span class="ifo">
+                    <i class="fa-solid fa-droplet icon"></i>
+                  </span>
+                  <span class="feel">
+                    <span class="item-title">Chance of Rain</span>
+                    <span class="number">10<span>&percnt;</span></span>
+                  </span>
+                </div>
+              </div>
+              <div class="right">
+                <div class="item">
+                  <span class="ifo">
+                    <i class="fa fa-wind icon"></i>
+                  </span>
+                  <span class="feel">
+                    <span class="item-title">Wind</span>
+                    <span class="number">30 <span>km/h</span></span>
+                  </span>
+                </div>
+                <div class="item">
+                  <span class="ifo">
+                    <i class="fa-solid fa-sun icon"></i>
+                  </span>
+                  <span class="feel">
+                    <span class="item-title">UV Index</span>
+                    <span class="number">4</span>
+                  </span>
+                </div>
+              </div>
+            </span>
+          </div>
+        </section>
+      </div>
+      <!-- MAIN CONTENT ENDS -->
+      <!-- WEEK FORCAST SECTION -->
+      <section class="right-section">
+        <div class="weekForcast box"></div>
+      </section>
+      <!-- WEEK FORCAST SECTION ENDS-->
     </div>
-</body>
-<script type="module" src="./js/dailyAPI.js"></script>
-<script>
-    var wrapper = document.querySelector('.wrapper');
-    var btnCloseNav = document.querySelector('.btnCloseNav');
-    var btnOpenNav = document.querySelector('#openNav');
+  </body>
+  <script type="module" src="./js/dailyAPI.js"></script>
+  <script>
+    var wrapper = document.querySelector(".wrapper");
+    var btnCloseNav = document.querySelector(".btnCloseNav");
+    var btnOpenNav = document.querySelector("#openNav");
+    var btnMode = document.querySelector('#btnMode');
 
-    btnCloseNav.addEventListener('click', ()=>{
-        wrapper.classList.remove('sidebarOn');
+    btnCloseNav.addEventListener("click", () => {
+      wrapper.classList.remove("sidebarOn");
     });
-    btnOpenNav.addEventListener('click', ()=>{
-        wrapper.classList.add('sidebarOn');
+    btnOpenNav.addEventListener("click", () => {
+      wrapper.classList.add("sidebarOn");
     });
-    
-</script>
-
+    btnMode.addEventListener('click', ()=> {
+      wrapper.classList.toggle('light');
+    })
+  </script>
 </html>
